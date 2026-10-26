@@ -9,17 +9,18 @@ public class Base {
   static void zad_1() // създаваме метод с име zad1
   {
       System.out.print("Name: "); 
-      String ime =  reader.nextLine(); 
+      String ime =  reader.nextLine(); // създава променлива за текст ; при стартиране пишем+ентер
       
-      System.out.print("Last name:");
+      System.out.print("Last name:"); // извежда форматиран текст 
       String familia = reader.nextLine(); 
       
-      System.out.print("FN "); 
+      System.out.print("FN: "); 
       String fn= reader.nextLine();
       
-      System.out.printf ("Az sum %s %s, fn %s, i ucha programirane", ime, familia, fn);
+      System.out.printf ("Az sum %s %s, fn %s, i ucha programirane", ime, familia, fn); 
+// %s поставя текстова стойност 
   }
   public static void main(String[] args) {
-      zad_1();
+      zad_1(); // викаме метода за да се изпълни
   }
 }
