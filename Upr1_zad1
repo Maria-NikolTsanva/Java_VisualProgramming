@@ -1,0 +1,25 @@
+package app;
+
+import java.util.Scanner; // позволява да се използваме Scanner 
+
+public class Base {
+
+  static Scanner reader = new Scanner(System.in);  // създ средство за четена от кл-та
+  
+  static void zad_1() // създаваме метод с име zad1
+  {
+      System.out.print("Name: "); 
+      String ime =  reader.nextLine(); 
+      
+      System.out.print("Last name:");
+      String familia = reader.nextLine(); 
+      
+      System.out.print("FN "); 
+      String fn= reader.nextLine();
+      
+      System.out.printf ("Az sum %s %s, fn %s, i ucha programirane", ime, familia, fn);
+  }
+  public static void main(String[] args) {
+      zad_1();
+  }
+}
