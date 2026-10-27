@@ -1,0 +1,33 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+package app; 
+
+import java.util.Scanner; // позволява да се използваме Scanner 
+
+public class Base {
+
+  static Scanner reader = new Scanner(System.in);  // създ средство за четена от кл-та
+  
+  static void zad_5() // създаваме метод с име zad1
+  { 
+//    //Метод zad_5, който прочита една дума и един символ и извежда на кои позиции символът се
+//среща в думата. Ако не се среща — подходящо съобщение.
+//Пример: „ананас“ и „а“ → 1, 3, 5; „хляб“ и „а“ → не се среща
+  
+System.out.print("Vuvedi duma: ");
+String duma = reader.nextLine();
+
+System.out.print("Simbol: ");
+String s = reader.nextLine(); // !!
+
+for ( int i=0; i<duma.length(); i++) // < - защ няма индекс равен на последната буква ( почваме броенето от 0
+{
+    if(duma.substring(i,i+1).equals(s)) // substring(i,i+1) - дума зп с индекс i и завършваща преди индекс i+1 - тоест взьема само i
+    {
+    System.out.print("Pozicai "+ (i+1)); }
+}
+  }  public static void main(String[] args) {
+      zad_5();
+  }
+}
