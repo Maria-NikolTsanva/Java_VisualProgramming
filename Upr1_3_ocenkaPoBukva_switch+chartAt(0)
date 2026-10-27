@@ -1,0 +1,25 @@
+package app; 
+
+import java.util.Scanner; // позволява да се използваме Scanner 
+
+public class Base {
+
+  static Scanner reader = new Scanner(System.in);  // създ средство за четена от кл-та
+  
+  static void zad_3() // създаваме метод с име zad1
+  { System.out.print("Vuvedi bukva");
+  char ocenka = reader.nextLine().charAt(0); // вземи 1ва буква от текста 
+  
+  switch (ocenka) {
+      case 'A','a'-> System.out.println("Otl");
+      case 'B','b'-> System.out.println("MN dobue");
+      case 'C','c' -> System.out.println("Dobre");
+      case 'D','d' -> System.out.print("Sreden");
+      default -> System.out.print("Proval");
+  }
+  }
+
+  public static void main(String[] args) {
+      zad_3();
+  }
+}
