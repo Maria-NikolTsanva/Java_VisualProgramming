@@ -1,0 +1,31 @@
+package app; 
+
+import java.util.Scanner; // позволява да се използваме Scanner 
+
+public class Base {
+
+  static Scanner reader = new Scanner(System.in);  // създ средство за четена от кл-та
+  
+  static void zad_6() // създаваме метод с име zad1
+  { 
+int[] chisla = new int[5];
+int sum=0; double average=0; 
+int br=0;
+for ( int i=0; i<chisla.length ; i++)
+{
+    System.out.print("Vuvedi: ");
+    chisla[i] = Integer.parseInt(reader.nextLine());
+    br++;
+    sum +=chisla[i];
+    average= (double)sum/br;
+}
+System.out.printf("sum: %d, average: %.2f%n", sum, average );
+  }  public static void main(String[] args) {
+      zad_6();
+  }
+}
+
+//Метод zad_6, който декларира масив от 5 цели числа, зарежда стойностите от клавиатурата с for
+//цикъл и извежда сумата им и средното аритметично.
+//Средното аритметично число да е дробно число и да се изведе в конзолата с два знака след
+//запетаята. Внимавайте с целочисленото деление — виж т. 1.4.
