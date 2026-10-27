@@ -1,0 +1,36 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+package app; 
+
+import java.util.Scanner; // позволява да се използваме Scanner 
+
+public class Base {
+
+  static Scanner reader = new Scanner(System.in);  // създ средство за четена от кл-та
+  
+  static void zad_2() // създаваме метод с име zad1
+  {
+try{
+        System.out.print("1st Num: "); 
+        int a = Integer.parseInt(reader.nextLine());
+        
+        System.out.print("2n numbr:") ;
+        int b = Integer.parseInt(reader.nextLine());
+        
+        int sum = a+b; 
+        double stepn = Math.pow(a, b);
+        
+        System.out.println("Sbor: "+sum);
+        System.out.println("Stpn: "+ stepn);
+  }
+        catch(NumberFormatException error)  {              
+        System.out.println("Error, type in celi cisla"); 
+        }            
+        
+  }
+  public static void main(String[] args) {
+      zad_2();
+  }
+}
+
