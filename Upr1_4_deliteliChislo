@@ -1,0 +1,26 @@
+package app; 
+
+import java.util.Scanner; // позволява да се използваме Scanner 
+
+public class Base {
+
+  static Scanner reader = new Scanner(System.in);  // създ средство за четена от кл-та
+  
+  static void zad_4() // създаваме метод с име zad1
+  { 
+      System.out.print("4islo: ");
+      int n= Integer.parseInt(reader.nextLine());
+      
+      
+      for ( int i=1; i<=100; i++)
+      {
+          if (i%n==0) { System.out.print(i+ ", "); }
+      }
+      
+  
+  }
+
+  public static void main(String[] args) {
+      zad_4();
+  }
+}
