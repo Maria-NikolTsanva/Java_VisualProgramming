@@ -1,0 +1,16 @@
+        // zapazi
+        String name = txfName.getText();
+        String lastName= txfLastName.getText();
+        String City = txfCity.getText();
+        String contry = txfCunty.getText();
+        String email = txfEmail.getText();
+        javax.swing.JOptionPane.showMessageDialog( this, "Контакти"+ name + " "+ lastName);
+    }  
+// iz4iati
+
+        txfName.setText("");
+        txfLastName.setText("");
+        txfCity.setText("");
+        txfCunty.setText("");
+        txfEmail.setText("");
+        
