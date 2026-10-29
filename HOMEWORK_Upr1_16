@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zad_16();
+    }
+
+    public static void zad_16() {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Въведи дума: ");
+        String word = reader.nextLine();
+
+        System.out.print("Въведи символ: ");
+        String symbol = reader.nextLine();
+
+        String result = word.replace(symbol, "");
+
+        System.out.println("Резултат: " + result);
+    }
+}
