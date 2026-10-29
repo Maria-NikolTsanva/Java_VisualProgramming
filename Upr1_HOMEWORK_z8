@@ -1,0 +1,26 @@
+package app; 
+
+import java.util.Scanner; // позволява да се използваме Scanner 
+
+public class Base {
+
+public static void zad8() {
+    Scanner reader = new Scanner(System.in);
+
+    System.out.print("Въведи първо число:");
+    int a = reader.Integer.parseInt(reader.nextLine());
+
+    System.out.print("Въведи второ число: ");
+    int b = reader.Integer.parseInt(reader.nextLine());
+
+    int max = Math.max(a, b);
+    int min = Math.min(a, b);
+
+    System.out.println("По-голямо: " + max);
+    System.out.println("Разлика: " + (max - min));
+}
+}
+
+  public static void main(String[] args) {
+      zad_8();
+  }
