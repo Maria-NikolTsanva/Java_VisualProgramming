@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zad13();
+    }
+
+    public static void zad13() {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Въведи число от 100 до 1000: ");
+        int num = Integer.parseInt(reader.nextLine());
+
+        if (num < 100 || num > 1000) {
+            System.out.println("Невалидно число!");
+            return;
+        }
+
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+
+            if (digit == 2 || digit == 3 ||
+                digit == 5 || digit == 7) {
+                sum = sum + digit;
+            }
+
+            num = num / 10;
+        }
+
+        System.out.println("Сума: " + sum);
+    }
+}
