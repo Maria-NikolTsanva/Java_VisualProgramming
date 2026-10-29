@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zad10();
+    }
+
+    public static void zad10() {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Въведи цифра от 0 до 3: ");
+        int num = Integer.parseInt(reader.nextLine());
+
+        switch (num) {
+            case 0 -> System.out.println("нула");
+            case 1 -> System.out.println("едно");
+            case 2 -> System.out.println("две");
+            case 3 -> System.out.println("три");
+            default -> System.out.println("Друга цифра");
+        }
+    }
+}
