@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        zad11();
+    }
+
+    public static void zad11() {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Въведи първа дума: ");
+        String a = reader.nextLine();
+
+        System.out.print("Въведи втора дума: ");
+        String b = reader.nextLine();
+
+        String longer;
+        String shorter;
+
+        if (a.length() >= b.length()) {
+            longer = a;
+            shorter = b;
+        } else {
+            longer = b;
+            shorter = a;
+        }
+
+        int position = longer.indexOf(shorter);
+
+        if (position != -1) {
+            System.out.println("Да");
+            System.out.println("Позиция: " + position);
+        } else {
+            System.out.println("Не");
+        }
+    }
+}
