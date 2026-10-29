@@ -1,0 +1,21 @@
+public class Main {
+
+    public static void main(String[] args) {
+        zad_17();
+    }
+
+    public static void zad_17() {
+        String text = "Аз уча програмиране с Java";
+
+        String[] words = text.split(" ");
+
+        words[words.length - 1] = "Python";
+
+        String result = String.join(" ", words);
+
+        System.out.println(result);
+    }
+}
+}public static void main(String[] args) {
+      zad_17();
+  }
