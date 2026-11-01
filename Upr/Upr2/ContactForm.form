@@ -24,10 +24,20 @@
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="miSplitName">
+        <Menu class="javax.swing.JMenu" name="muView">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Edit"/>
+            <Property name="text" type="java.lang.String" value="&#x418;&#x437;&#x433;&#x43b;&#x435;&#x434;"/>
           </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="miToggleFields">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x430;&#x43c;&#x43e; &#x437;&#x430;&#x434;&#x44a;&#x43b;&#x436;&#x438;&#x442;&#x435;&#x43b;&#x43d;&#x438; &#x43f;&#x43e;&#x43b;&#x435;&#x442;&#x430;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="miToggleFieldsActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
         </Menu>
       </SubComponents>
     </Menu>
