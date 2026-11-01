@@ -28,6 +28,7 @@ public class ContactForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         lblFirstNam = new javax.swing.JLabel();
         lblLastName = new javax.swing.JLabel();
         lblCity = new javax.swing.JLabel();
@@ -41,7 +42,13 @@ public class ContactForm extends javax.swing.JFrame {
         txfCunty = new javax.swing.JTextField();
         txfEmail = new javax.swing.JTextField();
         btnChangeCont = new javax.swing.JButton();
-        lblSave = new javax.swing.JLabel();
+        lblStatus = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        miSplitName = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,7 +77,20 @@ public class ContactForm extends javax.swing.JFrame {
         btnChangeCont.setText("Примрен контакт");
         btnChangeCont.addActionListener(this::btnChangeContActionPerformed);
 
-        lblSave.setText("Запазени са данни");
+        lblStatus.setText("Запазени са данни");
+
+        jMenu1.setText("Контакти");
+
+        jMenuItem2.setText("Раздли пълното име");
+        jMenuItem2.addActionListener(this::jMenuItem2ActionPerformed);
+        jMenu1.add(jMenuItem2);
+
+        jMenuBar1.add(jMenu1);
+
+        miSplitName.setText("Edit");
+        jMenuBar1.add(miSplitName);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -88,7 +108,7 @@ public class ContactForm extends javax.swing.JFrame {
                             .addComponent(txfCunty, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
                             .addComponent(txfEmail))
                         .addGap(18, 18, 18)
-                        .addComponent(lblSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lblStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblFirstNam, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -135,13 +155,13 @@ public class ContactForm extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addComponent(txfEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(lblSave, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnClean)
                     .addComponent(btnSave)
                     .addComponent(btnChangeCont))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -192,9 +212,27 @@ public class ContactForm extends javax.swing.JFrame {
         txfEmail.setText("nikolts01@gmail") ; 
         
         
-        lblSave.setText("Контактът е въведен успешно!");
+        lblStatus.setText("Контактът е въведен успешно!");
 
     }//GEN-LAST:event_btnChangeContActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+       // ActionPerformed = какво да се случи, когато потребителя избере команда от менюто
+        try {
+            String fullName= txfName.getText().trim(); // прочита написанмите редове и прмахва интервали в нач и края . 
+            // fullNamе - прмоемнлива, в която записваме теста
+            String[] parts = fullName.split(" "); // разделя текста по интервали на отелни части - пр Иван pars[0] и Иванов [1] 
+            
+            txfName.setText(parts[0]);
+            txfLastName.setText(parts[1]);
+            
+            lblStatus.setText("Името е разделено успешно"); 
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+         lblStatus.setText("Въведете име и фамилия раделени с интервал");    
+        }
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,12 +263,17 @@ public class ContactForm extends javax.swing.JFrame {
     private javax.swing.JButton btnChangeCont;
     private javax.swing.JButton btnClean;
     private javax.swing.JButton btnSave;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JLabel lblCity;
     private javax.swing.JLabel lblCuntry;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblFirstNam;
     private javax.swing.JLabel lblLastName;
-    private javax.swing.JLabel lblSave;
+    private javax.swing.JLabel lblStatus;
+    private javax.swing.JMenu miSplitName;
     private javax.swing.JTextField txfCity;
     private javax.swing.JTextField txfCunty;
     private javax.swing.JTextField txfEmail;
