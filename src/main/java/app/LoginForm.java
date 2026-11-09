@@ -6,7 +6,7 @@ package app;
 
 /**
  *
- * @author Галя Цанева
+ * @author Мария-Никол Цанева
  */
 public class LoginForm extends javax.swing.JFrame {
     
